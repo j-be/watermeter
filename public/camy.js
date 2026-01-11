@@ -28,13 +28,9 @@ function startStream() {
       video.srcObject = stream;
       video.play();
 
-      video.addEventListener('loadedmetadata', (e) => {
-        window.setTimeout(() =>
-          stream.getVideoTracks()[0].applyConstraints({
-            advanced: [{torch: true}]
-          })
-          , 500);
-      });
+      video.addEventListener('loadedmetadata', (e) => stream.getVideoTracks()[0]
+        .applyConstraints({ advanced: [{ torch: true }]})
+      );
 
 
     })
