@@ -23,10 +23,26 @@ function clearPhoto() {
 
 function startStream() {
   navigator.mediaDevices
-    .getUserMedia({ video: true, audio: false })
+    .getUserMedia({ video: { facingMode: { exact: "environment" }}, audio: false })
     .then((stream) => {
       video.srcObject = stream;
       video.play();
+
+      const track = stream.getVideoTracks()[0];
+      function onCapabilitiesReady(capabilities) {
+        lastUpload.textContent = JSON.stringify(capabilities);
+        track.applyConstraints({
+          advanced: [{torch: true}]
+        });
+      }
+
+      video.addEventListener('loadedmetadata', (e) => {
+        window.setTimeout(() => (
+          onCapabilitiesReady(track.getCapabilities())
+        ), 500);
+      });
+
+
     })
     .catch((err) => {
       console.error(`An error occurred: ${err}`);
