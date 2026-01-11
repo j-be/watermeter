@@ -28,18 +28,12 @@ function startStream() {
       video.srcObject = stream;
       video.play();
 
-      const track = stream.getVideoTracks()[0];
-      function onCapabilitiesReady(capabilities) {
-        lastUpload.textContent = JSON.stringify(capabilities);
-        track.applyConstraints({
-          advanced: [{torch: true}]
-        });
-      }
-
       video.addEventListener('loadedmetadata', (e) => {
-        window.setTimeout(() => (
-          onCapabilitiesReady(track.getCapabilities())
-        ), 500);
+        window.setTimeout(() =>
+          stream.getVideoTracks()[0].applyConstraints({
+            advanced: [{torch: true}]
+          })
+          , 500);
       });
 
 
