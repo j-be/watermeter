@@ -237,9 +237,9 @@ if (isset($_POST) && !empty($_POST)) {
     echo '<input type="submit" name="action" value="save">';
     echo '</form>';
     $watermeterReader = new Reader(true, $config);
-    $value = $watermeterReader->getReadout();
     $watermeterReader->writeDebugImage('tmp/input_debug.jpg');
     echo '<img src="tmp/input_debug.jpg" style="float: left;"/>';
+    $value = $watermeterReader->getReadout();
     ?>
     <?php if(isset($configDump)): ?>
         <div style="clear: both;"><pre><?php echo $configDump; ?></pre></div>
