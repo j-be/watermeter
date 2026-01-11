@@ -6,6 +6,7 @@ let streaming = false;
 const video = document.getElementById("video");
 const canvas = document.getElementById("canvas");
 const photo = document.getElementById("photo");
+const lastUpload = document.getElementById("last-upload");
 const startButton = document.getElementById("start-button");
 const allowButton = document.getElementById("permissions-button");
 
@@ -77,6 +78,7 @@ function uploadBlob(blob) {
     .then((res) => res.text())
     .then((text) => {
       console.log('Upload response:', text);
+      lastUpload.textContent = new Date().toISOString();
     })
     .catch((err) => {
       console.error('Upload failed:', err);

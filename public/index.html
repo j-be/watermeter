@@ -3,11 +3,14 @@
 <head>
   <title>Watermeter</title>
   <style>
-
+    .camera, #canvas, .output {
+      visibility: hidden;
+    }
   </style>
 </head>
 
 <body>
+  <span id="last-upload">never</span>
   <div class="camera">
     <video id="video">Video stream not available.</video>
     <button id="start-button">Capture photo</button>
