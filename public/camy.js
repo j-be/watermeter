@@ -32,7 +32,6 @@ function startStream() {
         .applyConstraints({ advanced: [{ torch: true }]})
       );
 
-
     })
     .catch((err) => {
       console.error(`An error occurred: ${err}`);
