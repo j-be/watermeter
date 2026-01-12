@@ -33,6 +33,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (move_uploaded_file($file['tmp_name'], $target)) {
                     @chmod($target, 0644);
                     $result = 'OK: file saved to ' . htmlspecialchars($target);
+
+                    // format: yyyy-MM-dd_hh:mm:ss (include seconds)
+                    $baseName = (new DateTime())->format('Y-m-d_H-i-s');
+                    $destPath = '/home/ubuntu/watermeter/log/' . $baseName . '.' . $allowed[$mime];
+
+                    if (@copy($target, $destPath)) {
+                        @chmod($destPath, 0644);
+                        $result .= ' and copied to ' . htmlspecialchars($destPath);
+                    } else {
+                        $result .= ' (no copy saved to /home/ubuntu/watermeter/log)';
+                    }
                 } else {
                     $result = 'Failed to move uploaded file.';
                 }
