@@ -3,79 +3,80 @@ $config = array (
   'logging' => false,
   'maxThreshold' => '0.2',
   'sourceImage' => '/tmp/upload.png',
-  'sourceImageRotate' => '270',
-  'sourceImageCropSizeX' => '1400',
-  'sourceImageCropSizeY' => '1400',
+  'sourceImageRotate' => '271',
+  'sourceImageCropSizeX' => '1200',
+  'sourceImageCropSizeY' => '1200',
   'sourceImageCropStartX' => '0',
-  'sourceImageCropStartY' => '0',
-  'sourceImageBrightness' => '30',
-  'sourceImageContrast' => '60',
+  'sourceImageCropStartY' => '500',
+  'sourceImageBrightness' => '0',
+  'sourceImageContrast' => '20',
   'postprocessing' => false,
-  'digitalDigits' =>
+  'digitalDigits' => 
   array (
-    1 =>
+    1 => 
     array (
-      'x' => '350',
-      'y' => '525',
-      'width' => '80',
-      'height' => '70',
+      'x' => '390',
+      'y' => '585',
+      'width' => '30',
+      'height' => '60',
     ),
-    2 =>
+    2 => 
     array (
-      'x' => '510',
-      'y' => '530',
-      'width' => '75',
-      'height' => '70',
+      'x' => '460',
+      'y' => '585',
+      'width' => '30',
+      'height' => '60',
     ),
-    3 =>
+    3 => 
     array (
-      'x' => '665',
-      'y' => '530',
-      'width' => '75',
-      'height' => '70',
+      'x' => '530',
+      'y' => '585',
+      'width' => '30',
+      'height' => '60',
     ),
-    4 =>
+    4 => 
     array (
-      'x' => '820',
-      'y' => '535',
-      'width' => '70',
-      'height' => '70',
+      'x' => '600',
+      'y' => '585',
+      'width' => '30',
+      'height' => '60',
     ),
   ),
-  'analogGauges' =>
+  'analogGauges' => 
   array (
-    1 =>
+    1 => 
     array (
-      'x' => '1040',
-      'y' => '670',
-      'width' => '345',
-      'height' => '210',
+      'x' => '705',
+      'y' => '695',
+      'width' => '170',
+      'height' => '175',
     ),
-    2 =>
+    2 => 
     array (
-      'x' => '850',
-      'y' => '875',
-      'width' => '345',
-      'height' => '210',
+      'x' => '620',
+      'y' => '870',
+      'width' => '170',
+      'height' => '175',
     ),
-    3 =>
+    3 => 
     array (
-      'x' => '455',
-      'y' => '960',
-      'width' => '355',
-      'height' => '210',
+      'x' => '445',
+      'y' => '935',
+      'width' => '170',
+      'height' => '175',
     ),
-    4 =>
+    4 => 
     array (
-      'x' => '45',
-      'y' => '860',
-      'width' => '365',
-      'height' => '210',
+      'x' => '260',
+      'y' => '865',
+      'width' => '160',
+      'height' => '160',
     ),
   ),
   'offsetValue' => '0',
-  'postDecimalDigits' =>
+  'postDecimalDigits' => 
   array (
   ),
   'sourceImageEqualize' => true,
+  'digitDecolorization' => true,
 );

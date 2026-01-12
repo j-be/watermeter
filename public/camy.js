@@ -23,7 +23,7 @@ function clearPhoto() {
 
 function startStream() {
   navigator.mediaDevices
-    .getUserMedia({ video: { facingMode: { exact: "environment" }}, audio: false })
+    .getUserMedia({ video: true, audio: false })
     .then((stream) => {
       video.srcObject = stream;
       video.play();
