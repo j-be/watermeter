@@ -11,61 +11,61 @@ $config = array (
   'sourceImageBrightness' => '0',
   'sourceImageContrast' => '20',
   'postprocessing' => false,
-  'digitalDigits' => 
+  'digitalDigits' =>
   array (
-    1 => 
+    1 =>
     array (
-      'x' => '390',
+      'x' => '380',
+      'y' => '590',
+      'width' => '30',
+      'height' => '60',
+    ),
+    2 =>
+    array (
+      'x' => '450',
       'y' => '585',
       'width' => '30',
       'height' => '60',
     ),
-    2 => 
+    3 =>
     array (
-      'x' => '460',
-      'y' => '585',
+      'x' => '520',
+      'y' => '590',
       'width' => '30',
       'height' => '60',
     ),
-    3 => 
+    4 =>
     array (
-      'x' => '530',
-      'y' => '585',
-      'width' => '30',
-      'height' => '60',
-    ),
-    4 => 
-    array (
-      'x' => '600',
-      'y' => '585',
+      'x' => '590',
+      'y' => '590',
       'width' => '30',
       'height' => '60',
     ),
   ),
-  'analogGauges' => 
+  'analogGauges' =>
   array (
-    1 => 
+    1 =>
     array (
       'x' => '705',
       'y' => '695',
       'width' => '170',
       'height' => '175',
     ),
-    2 => 
+    2 =>
     array (
       'x' => '620',
       'y' => '870',
       'width' => '170',
       'height' => '175',
     ),
-    3 => 
+    3 =>
     array (
       'x' => '445',
       'y' => '935',
       'width' => '170',
       'height' => '175',
     ),
-    4 => 
+    4 =>
     array (
       'x' => '260',
       'y' => '865',
@@ -74,9 +74,10 @@ $config = array (
     ),
   ),
   'offsetValue' => '0',
-  'postDecimalDigits' => 
+  'postDecimalDigits' =>
   array (
   ),
   'sourceImageEqualize' => true,
   'digitDecolorization' => true,
+  'digitalThreshold' => '0.25',
 );

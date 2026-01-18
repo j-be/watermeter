@@ -106,6 +106,10 @@ class Reader extends Watermeter
         if (isset($this->config['digitalDigitsInversion']) && $this->config['digitalDigitsInversion']) {
             $numberDigitalImage->negateImage(false);
         }
+        if (isset($this->config['digitalThreshold']) && $this->config['digitalThreshold'] > 0) {
+            $max = $numberDigitalImage->getQuantumRange()["quantumRangeLong"];
+            $numberDigitalImage->thresholdImage($this->config['digitalThreshold'] * $max);
+        }
         $numberDigitalImage->setImageFormat("png");
         $numberDigitalImage->borderImage('white', 10, 10);
         try {

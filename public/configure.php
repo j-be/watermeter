@@ -77,6 +77,9 @@ if (isset($_POST) && !empty($_POST)) {
     if (isset($_POST['digitalDigitsInversion']) && ($_POST['digitalDigitsInversion'] == 'on')) {
         $config['digitalDigitsInversion'] = true;
     }
+    if (isset($_POST['digitalThreshold'])) {
+        $config['digitalThreshold'] = $_POST['digitalThreshold'];
+    }
     if (isset($_POST['lastValue'])) {
         $lastValue = $_POST['lastValue'];
     }
@@ -195,6 +198,9 @@ if (isset($_POST) && !empty($_POST)) {
         <legend for="digitalDigitsInversion">Digit Inversion</legend>
         <input type="checkbox" name="digitalDigitsInversion"
                id="digitalDigitsInversion" <?php echo (isset($config['digitalDigitsInversion']) && $config['digitalDigitsInversion'] == true) ? 'checked' : ''; ?>>
+        <legend for="digitalThreshold">Digital Threshold</legend>
+        <input type="text" name="digitalThreshold"
+               id="digitalThreshold" value="<?php echo isset($config['digitalThreshold']) ? $config['digitalThreshold'] : ''; ?>">
     </fieldset>
     <?php
     echo '<fieldset class="coordinates"><legend>Pre Decimal Digital Digits</legend>';
